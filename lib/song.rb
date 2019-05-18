@@ -1,3 +1,5 @@
+require "pry"
+
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -44,5 +46,6 @@ class Song
     data = file_name.split(" - ")
     artist = data[0]
     song = data[1].gsub(".mp3")
+    binding.pry
   end
 end
